@@ -1,0 +1,4 @@
++ Informations
+= Build a VXLAN packet with VNI of 42
+load_contrib('vxlan') 
+sniff(iface='eth4', prn=lambda x: x.show2(), count = 1) 

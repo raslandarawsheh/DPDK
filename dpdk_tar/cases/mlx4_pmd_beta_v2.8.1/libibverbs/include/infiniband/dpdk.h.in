@@ -1,0 +1,8 @@
+#ifndef INFINIBAND_DPDK_H_
+#define INFINIBAND_DPDK_H_
+
+/* Tune for DPDK applications. Enabling this option prevents
+   libibverbs from working with other applications. */
+#undef DPDK
+
+#endif /* INFINIBAND_DPDK_H_ */

@@ -1,0 +1,25 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DPDK checksum test</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad IP Checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' '  --c ' ' --checksum 'IP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+</CASEDEF>

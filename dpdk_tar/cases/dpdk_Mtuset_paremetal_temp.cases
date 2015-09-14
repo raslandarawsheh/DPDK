@@ -1,0 +1,172 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>MTU set test</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+
+	<case>
+                <info>MTU set test</info>
+                <name>Case2 Unicast with non exist mac address  with mtu set multiple times</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --invalidMac ' ' --mtuSetMultipleTimes ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>MTU set test</info>
+                <name>Case3 Unicast  in non promiscuous mode with mtu set multiple times</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --setPromisc ' ' --mtuSetMultipleTimes ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>MTU set test</info>
+                <name>Case4 Unicast with non exist mac address in non promiscuous mode mtu set multiple times</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --setPromisc ' ' --invalidMac ' ' --mtuSetMultipleTimes ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>	
+		
+	<case>
+                <info>MTU set test</info>
+                <name>Case5 Multicast with mtu set multiple times</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --dest_ip multicast --mtuSetMultipleTimes ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>MTU set test</info>
+                <name>Case6 Multicast with non exist mac address with mtu set multiple times</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --invalidMac ' ' --dest_ip multicast  --mtuSetMultipleTimes ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>MTU set test</info>
+                <name>Case9 Unicast   with running testpmd with 2 queues setting mtu to 1000</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --txq 2 --rxq 2 --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>MTU set test</info>
+                <name>Case10 Unicast with non exist mac address  with running testpmd with 2 queues setting mtu to 1000</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --invalidMac ' ' --txq 2 --rxq 2 --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>MTU set test</info>
+                <name>Case11 Unicast  in non promiscuous mode with running testpmd with 2 queues setting mtu to 1000</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --setPromisc ' ' --txq 2 --rxq 2 --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>MTU set test</info>
+                <name>Case12 Unicast with non exist mac address in non promiscuous mode with running testpmd with 2 queues setting mtu to 1000</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --setPromisc ' ' --invalidMac ' ' --txq 2 --rxq 2 --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>MTU set test</info>
+                <name>Case13 Multicast   with running testpmd with 2 queues setting mtu to 1000</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --dest_ip multicast --txq 2 --rxq 2 --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>MTU set test</info>
+                <name>Case14 Multicast with non exist mac address  with running testpmd with 2 queues setting mtu to 1000</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --invalidMac ' ' --dest_ip multicast --txq 2 --rxq 2 --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>MTU set test</info>
+                <name>Case76 Multicast   with running testpmd with 8 queues setting mtu to 1000 with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --dest_ip multicast --txq 8 --rxq 8 --disable_rss ' ' --rssQueuesFlage ' ' --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>MTU set test</info>
+                <name>Case77 Multicast with non exist mac address  with running testpmd with 8 queues setting mtu to 1000 with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --invalidMac ' ' --dest_ip multicast --txq 8 --rxq 8 --disable_rss ' ' --rssQueuesFlage ' ' --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	
+	<case>
+                <info>MTU set test</info>
+                <name>Case82 Unicast   setting mtu to 1000 over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --vlan ' ' --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>	
+
+
+</CASEDEF>			

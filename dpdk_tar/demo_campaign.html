@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>VXLAN Tests</title>
+<link rel="stylesheet" href="http://www.secdev.org/projects/UTscapy/UTscapy.css" type="text/css">
+<script language="JavaScript" src="http://www.secdev.org/projects/UTscapy/UTscapy.js" type="text/javascript"></script>
+</head>
+<body>
+
+<h1>VXLAN Tests</h1>
+
+<span class=button onClick="hide_all('tst')">Shrink All</span>
+<span class=button onClick="show_all('tst')">Expand All</span>
+<span class=button onClick="show_passed('tst')">Expand Passed</span>
+<span class=button onClick="show_failed('tst')">Expand Failed</span>
+<p>
+CRC=<span class=crc>D5EAF656</span> SHA=<span class=crc>4171259BA4D21A7F3D23B70AEF33AD4DAC28BC5A</span><br><small><em>Run Mon Sep 14 08:44:34 2015 from [vxlan.txt] by <a href="http://www.secdev.org/projects/UTscapy/">UTscapy</a><br></em></small> Tests for the Scapy VXLAN layer
+
+<p>PASSED=3 FAILED=0<p>
+
+<span class=buttonpassed onClick="goto_id('tst0l')">000</span>
+<span class=buttonpassed onClick="goto_id('tst1l')">001</span>
+<span class=buttonpassed onClick="goto_id('tst2l')">002</span>
+
+
+<h2><span class=crc>083AEA2E</span> Informations</h2>
+
+<ul>
+<li class=passed id="tst0l">
+
+<span id="tst0+" class="buttonpassed" onClick="show('tst0')">+000+</span>
+<span id="tst0-" class="buttonpassed" onClick="hide('tst0')" style="POSITION: absolute; VISIBILITY: hidden;">-000-</span>
+<span class=crc>180F5E57</span>
+Build a VXLAN packet with VNI of 42
+<span class="comment passed" id="tst0"  style="POSITION: absolute; VISIBILITY: hidden;" ><br>
+<pre>
+&gt;&gt;&gt; load_contrib('vxlan')
+&gt;&gt;&gt; str(UDP(sport=1024, dport=4789, len=None, chksum=None)/VXLAN(flags=0x08, vni=42)) == '\x04\x00\x12\xb5\x00\x10\x00\x00\x08\x00\x00\x00\x00\x00\x2a\x00'
+True
+</pre></span>
+<li class=passed id="tst1l">
+
+<span id="tst1+" class="buttonpassed" onClick="show('tst1')">+001+</span>
+<span id="tst1-" class="buttonpassed" onClick="hide('tst1')" style="POSITION: absolute; VISIBILITY: hidden;">-001-</span>
+<span class=crc>B63A3C3F</span>
+Verify VXLAN Ethernet Binding
+<span class="comment passed" id="tst1"  style="POSITION: absolute; VISIBILITY: hidden;" ><br>
+<pre>
+<span class=prompt>&gt;&gt;&gt; </span>load_contrib('vxlan')
+<span class=prompt>&gt;&gt;&gt; </span>str(VXLAN(vni=23)/Ether(dst='11:11:11:11:11:11', src='11:11:11:11:11:11', type=0x800)) == '\x08\x00\x00\x00\x00\x00\x17\x00\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x08\x00'
+True
+</pre></span>
+<li class=passed id="tst2l">
+
+<span id="tst2+" class="buttonpassed" onClick="show('tst2')">+002+</span>
+<span id="tst2-" class="buttonpassed" onClick="hide('tst2')" style="POSITION: absolute; VISIBILITY: hidden;">-002-</span>
+<span class=crc>10307242</span>
+Send Packet via Scapy
+<span class="comment passed" id="tst2"  style="POSITION: absolute; VISIBILITY: hidden;" ><br>
+<pre>
+<span class=prompt>&gt;&gt;&gt; </span>load_contrib('vxlan')
+<span class=prompt>&gt;&gt;&gt; </span>data= 'Data to be sent via Scapy'
+<span class=prompt>&gt;&gt;&gt; </span>p =Ether(src='f4:52:14:2c:5d:42', dst='f4:52:14:2c:5d:21')/IP(dst='224.10.10.10', src='11.4.3.6')/UDP(sport=1337,dport=4789)/Raw(load=data)/VXLAN(vni=42) 
+<span class=prompt>&gt;&gt;&gt; </span>sendp(p, iface='eth5')
+<span class=prompt>&gt;&gt;&gt; </span>p =IP(dst='11.4.3.5', src='11.4.3.6')/UDP(sport=1337,dport=4789)/Raw(load=data)/VXLAN(vni=42) 
+<span class=prompt>&gt;&gt;&gt; </span>send(p)
+</pre></span>
+
+</ul>
+
+</body></html>

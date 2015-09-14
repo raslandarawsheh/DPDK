@@ -1,0 +1,255 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DPDK checksum test</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+	     <case>
+                <info>dpdk test</info>
+                <name>Bad IP Checksum offloaded checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'IP' --device '/dev/mst/mt4103_pci_cr0' --offloaded ''  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad UDP Checksum  offloaded checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'UDP' --device '/dev/mst/mt4103_pci_cr0' --offloaded ''    </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+     <case>
+                <info>dpdk test</info>
+                <name>Bad TCP Checksum offloaded checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'TCP' --device '/dev/mst/mt4103_pci_cr0' --offloaded ''  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad IP/UDP Checksum offloaded checksum  </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'IP,UDP' --device '/dev/mst/mt4103_pci_cr0'  --offloaded ''  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+ <case>
+                <info>dpdk test</info>
+                <name>Bad IP/TCP Checksum offloaded checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'IP,TCP' --device '/dev/mst/mt4103_pci_cr0' --offloaded ''   </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+     <case>
+                <info>dpdk test</info>
+                <name>Bad VXLAN inner IP header Checksum offloaded checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'VXLAN_IP' --device '/dev/mst/mt4103_pci_cr0'  --offloaded ''  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Bad VXLAN inner TCP header Checksum </info>
+                <name>Bad UDP Checksum offloaded checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'VXLAN_TCP' --device '/dev/mst/mt4103_pci_cr0'  --offloaded ''  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+    <case>
+                <info>dpdk test</info>
+                <name>Bad IP Checksum with -m compilation flagoffloaded checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'IP' --device '/dev/mst/mt4103_pci_cr0'  --m ' ' --offloaded ''  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad UDP Checksum with -m compilation flagoffloaded checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'UDP' --device '/dev/mst/mt4103_pci_cr0'  --m ' ' --offloaded ''  </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	 <case>
+                <info>dpdk test</info>
+                <name>Bad IP Checksum with -m and -d compilation flags offloaded checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'IP' --device '/dev/mst/mt4103_pci_cr0'  --m ' ' --d ' ' --offloaded ''   </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad UDP Checksum with -m and -d compilation flags offloaded checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'UDP' --device '/dev/mst/mt4103_pci_cr0'  --m ' ' --d ' ' --offloaded ''   </static_args>
+                        </params>
+                </cmd>
+        </case>
+	 <case>
+                <info>dpdk test</info>
+                <name>Bad IP Checksum  using software checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'IP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad UDP Checksum  using software checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'UDP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad TCP Checksum  using software checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'TCP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad IP/UDP Checksum  using software checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'IP,UDP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+	<case>
+                <info>dpdk test</info>
+                <name>Bad IP/TCP Checksum  using software checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'IP,TCP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad VXLAN inner IP header Checksum  using software checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'VXLAN_IP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+	<case>
+                <info>Bad VXLAN inner TCP header Checksum </info>
+                <name>Bad UDP Checksum  using software checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'VXLAN_TCP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad IP Checksum with -m compilation flag using software checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'IP' --device '/dev/mst/mt4103_pci_cr0'  --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad UDP Checksum with -m compilation flag using software checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'UDP' --device '/dev/mst/mt4103_pci_cr0'  --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	 
+
+                        <case>
+                <info>dpdk test</info>
+                <name>Bad IP Checksum with -m and -d compilation flags using software checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'IP' --device '/dev/mst/mt4103_pci_cr0'  --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad UDP Checksum with -m and -d compilation flags using software checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --c ' ' --checksum 'UDP' --device '/dev/mst/mt4103_pci_cr0'  --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+</CASEDEF>

@@ -1,0 +1,51 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>Multicast test</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+         <case>
+                <info>dpdk test</info>
+                <name>Multicast   ipv6 </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --multicast ' '  --ipv6 ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+         <case>
+                <info>dpdk test</info>
+                <name>Multicast   with vlanFiltering on 1 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args>  --device '/dev/mst/mt4103_pci_cr0' --multicast ' ' --vlanFiltering '1' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+  
+  
+
+         <case>
+                <info>dpdk test</info>
+                <name>Multicast   with vlanFiltering on 2 vlans</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args>  --device '/dev/mst/mt4103_pci_cr0' --multicast ' ' --vlanFiltering '2' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+  
+</CASEDEF>

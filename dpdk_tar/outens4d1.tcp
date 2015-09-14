@@ -1,0 +1,50 @@
+tcpdump: listening on ens4d1, link-type EN10MB (Ethernet), capture size 65535 bytes
+11:49:09.048942 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto Options (0), length 45, bad cksum abc (->5ebe)!)
+    11.4.3.6 > 11.4.3.5:  ip 25
+11:51:00.639946 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto Options (0), length 45, bad cksum abc (->5ebe)!)
+    11.4.3.6 > 11.4.3.5:  ip 25
+12:02:14.991942 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto Options (0), length 45, bad cksum abc (->5ebe)!)
+    11.4.3.6 > 11.4.3.5:  ip 25
+12:03:33.039850 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto Options (0), length 45, bad cksum abc (->5ebe)!)
+    11.4.3.6 > 11.4.3.5:  ip 25
+12:07:36.347028 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto UDP (17), length 53)
+    11.4.3.6.menandmice-dns > 11.4.3.5.4789: [bad udp cksum 0x0abc -> 0x218f!] VXLAN, flags [.] (0x44), vni 2126959
+74:20:76:69:61:20 (oui Unknown) > 62:65:20:73:65:6e (oui Unknown), ethertype Unknown (0x5363), length 17: 
+	0x0000:  6170 79                                  apy
+12:08:11.214026 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto UDP (17), length 53)
+    11.4.3.6.menandmice-dns > 11.4.3.5.4789: [bad udp cksum 0x0abc -> 0x218f!] VXLAN, flags [.] (0x44), vni 2126959
+74:20:76:69:61:20 (oui Unknown) > 62:65:20:73:65:6e (oui Unknown), ethertype Unknown (0x5363), length 17: 
+	0x0000:  6170 79                                  apy
+12:09:08.982036 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto UDP (17), length 53)
+    11.4.3.6.menandmice-dns > 11.4.3.5.4789: [bad udp cksum 0x0abc -> 0x218f!] VXLAN, flags [.] (0x44), vni 2126959
+74:20:76:69:61:20 (oui Unknown) > 62:65:20:73:65:6e (oui Unknown), ethertype Unknown (0x5363), length 17: 
+	0x0000:  6170 79                                  apy
+12:11:27.523031 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto UDP (17), length 53)
+    11.4.3.6.menandmice-dns > 11.4.3.5.4789: [bad udp cksum 0x0abc -> 0x218f!] VXLAN, flags [.] (0x44), vni 2126959
+74:20:76:7 packets captured
+9 packets received by filter
+0 packets dropped by kernel
+(0x5363), length 17: 
+	0x0000:  6170 79                                  apy
+
+8 packets captured
+10 packets received by filter
+0 packets dropped by kernel
+0x5363), length 17: 
+	0x0000:  6170 79                                  apy
+
+9 packets captured
+11 packets received by filter
+0 packets dropped by kernel
+0x5363), length 17: 
+	0x0000:  6170 79                                  apy
+
+10 packets captured
+12 packets received by filter
+0 packets dropped by kernel
+x5363), length 17: 
+	0x0000:  6170 79                                  apy
+
+11 packets captured
+13 packets received by filter
+0 packets dropped by kernel

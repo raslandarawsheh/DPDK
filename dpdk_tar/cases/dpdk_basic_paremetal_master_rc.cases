@@ -1,0 +1,905 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DPDK test</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --setPromisc ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --setPromisc ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --setPromisc ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --setPromisc ' ' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --add_mac ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --invalidMac ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --setPromisc ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --setPromisc ' ' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 2 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues with disable receive side scaling </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>		
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 4 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --disable_rss ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>	
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 4 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --disable_rss ' ' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>	
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 4 queues with disable receive side scaling </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --disable_rss ' ' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>	
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 8 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>	
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 8 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --invalidMac ' ' --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --setPromisc ' ' --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' ' --invalidMac ' ' --setPromisc ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' ' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+   <case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 2 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --invalidMac ' ' --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --rssQueuesFlage ' ' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 4 queues</name>
+                <tout>140</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 4 queues</name>
+                <tout>140</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --invalidMac ' ' --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 4 queues</name>
+                <tout>140</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with running testpmd with 4 queues</name>
+                <tout>140</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' ' --invalidMac ' ' --setPromisc ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 4 queues</name>
+                <tout>140</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' ' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+   <case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 4 queues with disable receive side scaling</name>
+                <tout>140</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --disable_rss ' ' --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 4 queues with disable receive side scaling</name>
+                <tout>140</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --disable_rss ' ' --invalidMac ' ' --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 4 queues with disable receive side scaling</name>
+                <tout>140</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --disable_rss ' ' --rssQueuesFlage ' ' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --invalidMac ' ' --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --setPromisc ' ' --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --rssQueuesFlage ' ' --invalidMac ' ' --setPromisc ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --rssQueuesFlage ' ' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 8 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 8 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' --invalidMac ' ' --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 8 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' --rssQueuesFlage ' ' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --setPromisc ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --setPromisc ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --vlan ' ' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 2 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --invalidMac ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 2 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --setPromisc ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with running testpmd with 2 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --setPromisc ' ' --invalidMac ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --vlan ' ' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 4 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 4 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --invalidMac ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 4 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --vlan ' ' --setPromisc ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with running testpmd with 4 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' --invalidMac ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 4 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --vlan ' ' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 8 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 8 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --invalidMac ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 8 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --setPromisc ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with running testpmd with 8 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --setPromisc ' ' --invalidMac ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 8 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --add_mac ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues with disable receive side scaling over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 2 queues with disable receive side scaling over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --invalidMac ' ' --disable_rss ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues with disable receive side scaling over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --add_mac ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 4 queues with disable receive side scaling over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --disable_rss ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 4 queues with disable receive side scaling over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --disable_rss ' ' --invalidMac ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 4 queues with disable receive side scaling over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --disable_rss ' ' 
+ ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 8 queues with disable receive side scaling over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 8 queues with disable receive side scaling over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' --invalidMac ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 8 queues with disable receive side scaling over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' --add_mac ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+</CASEDEF>

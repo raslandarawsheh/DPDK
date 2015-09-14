@@ -1,0 +1,136 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DPDK test ipv6 in debug mode</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   ipv6 </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --device '/dev/mst/mt4103_pci_cr0'  --ipv6 ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  ipv6 </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --ipv6 ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode ipv6 </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --device '/dev/mst/mt4103_pci_cr0' --setPromisc ' ' --ipv6 ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode ipv6 </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --setPromisc ' ' --ipv6 ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd ipv6 </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --ipv6 ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues ipv6 </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --ipv6 ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 4 queues ipv6 </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --invalidMac ' ' --ipv6 ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with running testpmd with 8 queues ipv6 </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --setPromisc ' ' --invalidMac ' ' --ipv6 ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues with disable receive side scaling ipv6 </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --ipv6 ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 8 queues ipv6 </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --rssQueuesFlage ' ' --ipv6 ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd over vlan  ipv6 </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --device '/dev/mst/mt4103_pci_cr0' --vlan ' ' --add_mac ' ' --ipv6 ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+</CASEDEF>

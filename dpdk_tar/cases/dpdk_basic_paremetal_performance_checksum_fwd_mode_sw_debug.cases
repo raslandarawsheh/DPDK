@@ -1,0 +1,347 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DPDK Performanwe test</name>
+			<owner>Fsamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_performance_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  message size 64 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP'  --msg-size 64 --device '/dev/mst/mt4103_pci_cr0'  --fwd-mode sw-d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  message size 128 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP'  --msg-size 128 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  message size 256 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP'  --msg-size 256 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  message size 512 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP'  --msg-size 512 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  message size 1024 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP'  --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional  message size 64 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --Bidirectional ' '   --msg-size 64 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional  message size 128 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --Bidirectional ' '   --msg-size 128 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional  message size 256 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --Bidirectional ' '   --msg-size 256 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional  message size 512 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --Bidirectional ' '   --msg-size 512 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional  message size 1024 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --Bidirectional ' '   --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional  message size 64 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --recv-inline ' '  --Bidirectional ' '   --msg-size 64 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional  message size 128 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --recv-inline ' '  --Bidirectional ' '   --msg-size 128 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional  message size 256 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --recv-inline ' '  --Bidirectional ' '   --msg-size 256 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional  message size 512 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --recv-inline ' '  --Bidirectional ' '   --msg-size 512 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional  message size 1024 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --recv-inline ' '  --Bidirectional ' '   --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast Enable RSS message size 64 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --RSS ' ' --msg-size 64 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast Enable RSS message size 128 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --RSS ' ' --msg-size 128 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast Enable RSS message size 256 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --RSS ' ' --msg-size 256 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast Enable RSS message size 512 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --RSS ' ' --msg-size 512 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast Enable RSS message size 1024 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --RSS ' ' --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional Enable RSS message size 64 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --Bidirectional ' '  --RSS ' ' --msg-size 64 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional Enable RSS message size 128 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --Bidirectional ' '  --RSS ' ' --msg-size 128 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional Enable RSS message size 256 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --Bidirectional ' '  --RSS ' ' --msg-size 256 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional Enable RSS message size 512 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --Bidirectional ' '  --RSS ' ' --msg-size 512 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional Enable RSS message size 1024 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --Bidirectional ' '  --RSS ' ' --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional Enable RSS message size 64 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 64 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional Enable RSS message size 128 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 128 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional Enable RSS message size 256 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 256 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional Enable RSS message size 512 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 512 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional Enable RSS message size 1024 wits UDP csecksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --csecksum 'UDP' --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw -d </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	
+</CASEDEF>
+

@@ -1,0 +1,91 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DPDK checksum test libs compiled statically with SGE_WR_N=1</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad IP Checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --c ' ' --checksum 'IP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Bad UDP Checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --c ' ' --checksum 'UDP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Bad TCP Checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --c ' ' --checksum 'TCP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Bad IP/UDP Checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --c ' ' --checksum 'IP,UDP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Bad IP/TCP Checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --c ' ' --checksum 'IP,TCP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad VXLAN inner IP header Checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' ' --c ' ' --checksum 'VXLAN_IP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Bad VXLAN inner TCP header Checksum </info>
+                <name>Bad UDP Checksum </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' ' --c ' ' --checksum 'VXLAN_TCP' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+</CASEDEF>

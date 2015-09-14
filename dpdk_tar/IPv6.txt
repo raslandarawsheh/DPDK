@@ -1,0 +1,7 @@
+% IPv6 Tests
++ Informations
+
+= Send Packet via Scapy
+data= 'Data to be sent via Scapy'
+p =Ether(src='e4:1d:2d:5c:f0:cc', dst='e4:1d:2d:5c:ec:d0')/IPv6(dst='2001:db8::1', src='2001:db9::1')/UDP(sport=1337,dport=4789)/Raw(load=data) 
+sendp(p, iface='eth12')

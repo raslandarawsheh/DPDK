@@ -1,0 +1,18 @@
+% VXLAN Tests
+* Tests for the Scapy VXLAN layer
++ Informations
+= Build a VXLAN packet with VNI of 42
+load_contrib('vxlan')
+str(UDP(sport=1024, dport=4789, len=None, chksum=None)/VXLAN(flags=0x08, vni=42)) == '\x04\x00\x12\xb5\x00\x10\x00\x00\x08\x00\x00\x00\x00\x00\x2a\x00'
+
+= Verify VXLAN Ethernet Binding
+load_contrib('vxlan')
+str(VXLAN(vni=23)/Ether(dst='11:11:11:11:11:11', src='11:11:11:11:11:11', type=0x800)) == '\x08\x00\x00\x00\x00\x00\x17\x00\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x08\x00'
+
+= Send Packet via Scapy
+load_contrib('vxlan')
+data= 'Data to be sent via Scapy'
+p =Ether(src='f4:52:14:2c:5d:42', dst='f4:52:14:2c:5d:21')/IP(dst='224.10.10.10', src='11.4.3.6')/UDP(sport=1337,dport=4789)/Raw(load=data)/VXLAN(vni=42) 
+sendp(p, iface='eth5')
+p =IP(dst='11.4.3.5', src='11.4.3.6')/UDP(sport=1337,dport=4789)/Raw(load=data)/VXLAN(vni=42) 
+send(p) 

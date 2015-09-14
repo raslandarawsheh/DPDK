@@ -1,0 +1,32 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>Flow Control test</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+
+
+
+	<case>
+                <info>Flow Control</info>
+                <name>set flow control parameters at once to off and check the two ports with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --set_flow_control_at_once off  --d ' ' --m ' ' --c ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+
+		
+		
+
+</CASEDEF>

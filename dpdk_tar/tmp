@@ -1,0 +1,58 @@
+./cases/dpdk_recvinline_paremetal.cases:                                <static_args> --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 64  </static_args>
+./cases/dpdk_recvinline_paremetal.cases:                                <static_args> --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 64 --txq 2 --rxq 2 </static_args>
+./cases/dpdk_recvinline_paremetal.cases:                                <static_args> --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 64 --txq 4 --rxq 4 </static_args>
+./cases/dpdk_recvinline_paremetal.cases:                                <static_args> --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 64  --vlan ' ' </static_args>
+./cases/dpdk_recvinline_paremetal.cases:                                <static_args> --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 512  </static_args>
+./cases/dpdk_recvinline_paremetal.cases:                                <static_args> --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 512 --txq 2 --rxq 2 </static_args>
+./cases/dpdk_recvinline_paremetal.cases:                                <static_args> --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 512 --txq 4 --rxq 4 </static_args>
+./cases/dpdk_recvinline_paremetal.cases:                                <static_args> --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 512  --vlan ' ' </static_args>
+./cases/dpdk_performance_wrapper.py:        self.add_cmd_argument('--msg-size', help='message Size', type=str, value_only=False, priority=21)
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args>  --msg-size 64 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args>  --msg-size 128 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args>  --msg-size 256 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args>  --msg-size 512 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args>  --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --Bidirectional ' '   --msg-size 64 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --Bidirectional ' '   --msg-size 128 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --Bidirectional ' '   --msg-size 256 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --Bidirectional ' '   --msg-size 512 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --Bidirectional ' '   --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --recv-inline ' '  --Bidirectional ' '   --msg-size 64 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --recv-inline ' '  --Bidirectional ' '   --msg-size 128 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --recv-inline ' '  --Bidirectional ' '   --msg-size 256 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --recv-inline ' '  --Bidirectional ' '   --msg-size 512 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --recv-inline ' '  --Bidirectional ' '   --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --RSS ' ' --msg-size 64 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --RSS ' ' --msg-size 128 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --RSS ' ' --msg-size 256 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --RSS ' ' --msg-size 512 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --RSS ' ' --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --Bidirectional ' '  --RSS ' ' --msg-size 64 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --Bidirectional ' '  --RSS ' ' --msg-size 128 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --Bidirectional ' '  --RSS ' ' --msg-size 256 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --Bidirectional ' '  --RSS ' ' --msg-size 512 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --Bidirectional ' '  --RSS ' ' --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 64 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 128 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 256 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 512 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./cases/dpdk_basic_paremetal_performance.cases:                                <static_args> --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+./dpdk_performance.py:        opts, extraparams = getopt.getopt(tuple, "hsF:f:i:a:A:E:",['server', 'ip=', 'port=', 'mip=', 'cip=', 'invalidMac', 'setPromisc', 'dest_ip=', 'add_mac', 'rxq=', 'txq=', 'disable_rss', 'rssQueuesFlage', 'vlan', 'portUpInInit', 'mtuSet=', 'vlanFiltering=', 'mtuSetMultipleTimes', 'autonegotiateEthtool=', 'rxEthtool=', 'txEthtool=', 'device=', 'dnfs', 'Bidirectional', 'RSS','recv-inline','msg-size='])
+./dpdk_performance.py:            elif o in ['--msg-size']:
+./dpdk_performance.py:        print "msg-sizeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",msgSize
+./dpdk_performance.py~:        opts, extraparams = getopt.getopt(tuple, "hsF:f:i:a:A:E:",['server', 'ip=', 'port=', 'mip=', 'cip=', 'invalidMac', 'setPromisc', 'dest_ip=', 'add_mac', 'rxq=', 'txq=', 'disable_rss', 'rssQueuesFlage', 'vlan', 'portUpInInit', 'mtuSet=', 'vlanFiltering=', 'mtuSetMultipleTimes', 'autonegotiateEthtool=', 'rxEthtool=', 'txEthtool=', 'device=', 'dnfs', 'Bidirectional', 'RSS','recv-inline','msg-size='])
+./dpdk_performance.py~:            elif o in ['--msg-size']:
+./dpdk_performance.py~:        print "msg-sizeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",msgSize
+./dpdk_performance.py.bac:        opts, extraparams = getopt.getopt(tuple, "hsF:f:i:a:A:E:",['server', 'ip=', 'port=', 'mip=', 'cip=', 'invalidMac', 'setPromisc', 'dest_ip=', 'add_mac', 'rxq=', 'txq=', 'disable_rss', 'rssQueuesFlage', 'vlan', 'portUpInInit', 'mtuSet=', 'vlanFiltering=', 'mtuSetMultipleTimes', 'autonegotiateEthtool=', 'rxEthtool=', 'txEthtool=', 'device=', 'dnfs', 'Bidirectional', 'RSS','recv-inline','msg-size='])
+./dpdk_performance.py.bac:            elif o in ['--msg-size']:
+./dpdk_performance.py.bac:        print "msg-sizeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",msgSize
+./dpdk.py:        opts, extraparams = getopt.getopt(tuple, "hsF:f:i:a:A:E:",['server', 'vxlan=', 'ip=', 'port=', 'mip=', 'cip=', 'set_flow_control_at_once=', 'invalidMac', 'setPromisc', 'dest_ip=', 'add_mac', 'rxq=', 'txq=', 'disable_rss', 'rssQueuesFlage', 'vlan', 'portUpInInit', 'mtuSet=', 'vlanFiltering=', 'mtuSetMultipleTimes', 'autonegotiateEthtool=', 'rxEthtool=', 'txEthtool=', 'device=', 'dnfs','recv-inline=','msg-size=', 'm'])
+./dpdk.py:	    elif o in ['--msg-size']:
+./dpdk.py~:        opts, extraparams = getopt.getopt(tuple, "hsF:f:i:a:A:E:",['server', 'vxlan=', 'ip=', 'port=', 'mip=', 'cip=', 'set_flow_control_at_once=', 'invalidMac', 'setPromisc', 'dest_ip=', 'add_mac', 'rxq=', 'txq=', 'disable_rss', 'rssQueuesFlage', 'vlan', 'portUpInInit', 'mtuSet=', 'vlanFiltering=', 'mtuSetMultipleTimes', 'autonegotiateEthtool=', 'rxEthtool=', 'txEthtool=', 'device=', 'dnfs','recv-inline=','msg-size=', 'm'])
+./dpdk.py~:	    elif o in ['--msg-size']:
+./dpdk.py.bac:        opts, extraparams = getopt.getopt(tuple, "hsF:f:i:a:A:E:",['server', 'vxlan=', 'ip=', 'port=', 'mip=', 'cip=', 'set_flow_control_at_once=', 'invalidMac', 'setPromisc', 'dest_ip=', 'add_mac', 'rxq=', 'txq=', 'disable_rss', 'rssQueuesFlage', 'vlan', 'portUpInInit', 'mtuSet=', 'vlanFiltering=', 'mtuSetMultipleTimes', 'autonegotiateEthtool=', 'rxEthtool=', 'txEthtool=', 'device=', 'dnfs','recv-inline=','msg-size=', 'm'])
+./dpdk.py.bac:	    elif o in ['--msg-size']:
+./dpdk.py.bac5:        opts, extraparams = getopt.getopt(tuple, "hsF:f:i:a:A:E:",['server', 'vxlan', 'ip=', 'port=', 'mip=', 'cip=', 'invalidMac', 'setPromisc', 'dest_ip=', 'add_mac', 'rxq=', 'txq=', 'disable_rss', 'rssQueuesFlage', 'vlan', 'portUpInInit', 'mtuSet=', 'vlanFiltering=', 'mtuSetMultipleTimes', 'autonegotiateEthtool=', 'rxEthtool=', 'txEthtool=', 'device=', 'dnfs','recv-inline','msg-size='])
+./dpdk.py.bac5:	    elif o in ['--msg-size']:
+./dpdk.py.bac6:        opts, extraparams = getopt.getopt(tuple, "hsF:f:i:a:A:E:",['server', 'vxlan=', 'ip=', 'port=', 'mip=', 'cip=', 'set_flow_control_at_once=', 'invalidMac', 'setPromisc', 'dest_ip=', 'add_mac', 'rxq=', 'txq=', 'disable_rss', 'rssQueuesFlage', 'vlan', 'portUpInInit', 'mtuSet=', 'vlanFiltering=', 'mtuSetMultipleTimes', 'autonegotiateEthtool=', 'rxEthtool=', 'txEthtool=', 'device=', 'dnfs','recv-inline=','msg-size=', 'm'])
+./dpdk.py.bac6:	    elif o in ['--msg-size']:

@@ -1,0 +1,37 @@
+#!/usr/bin/python
+import os
+from datetime import datetime
+
+os.system("echo '111' >> /tmp/new_out.log")
+
+print "Remove last cloned DPDK"
+os.system("rm -rf /downloud/dpdk/master_rc/")
+
+print "Cloninig DPDK into '/share/dpdk/dpdk_tar/cases/'"
+os.system("cd /share/dpdk/dpdk_tar/cases/; git clone git://dpdk.org/dpdk ")
+
+os.system("echo 'dpdk cloned ...' >> /tmp/new_out.log")
+
+date = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
+directory = '/tmp/' + date
+
+print "Moving last dpdk_master from /tmp/dpdk_master to %s" %directory
+os.system("mv /tmp/dpdk_master /%s >> /tmp/new_out.log" %directory)
+
+os.system("echo 'dpdk back up to %s ...' >> /tmp/new_out.log" %directory)
+
+print "Moving the latest dpdk_master from /share/dpdk/dpdk_tar/cases/ to /tmp/dpdk_master"
+os.system("cp -r /share/dpdk/dpdk_tar/cases/dpdk /tmp/dpdk_master >> /tmp/new_out.log")
+
+os.system("echo 'dpdk moved to /tmp/dpdk_master' >> /tmp/new_out.log")
+
+print "Enabling MLX4 PMD from '/tmp/dpdk_master/config/common_linuxapp' for both parameters 'CONFIG_RTE_LIBRTE_MLX4_PMD' & 'CONFIG_RTE_LIBRTE_MLX4_DEBUG'"
+os.system("sed -i '/CONFIG_RTE_LIBRTE_MLX4_PMD=n/c\CONFIG_RTE_LIBRTE_MLX4_PMD=y' '/tmp/dpdk_master/config/common_linuxapp'")
+os.system("sed -i '/CONFIG_RTE_LIBRTE_MLX4_DEBUG=n/c\CONFIG_RTE_LIBRTE_MLX4_DEBUG=y' '/tmp/dpdk_master/config/common_linuxapp'")
+
+os.system("echo 'dpdk options enabled' >> /tmp/new_out.log")
+
+print "Compiling the latest dpdk_master in /tmp/dpdk_master"
+os.system("cd /tmp/dpdk_master; make install T=x86_64-native-linuxapp-gcc")
+
+os.system("echo 'dpdk compiled' >> /tmp/new_out.log")

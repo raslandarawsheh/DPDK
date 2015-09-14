@@ -1,0 +1,35 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>ping test</name>
+			<owner>AlonGr</owner>
+		</Test>
+		<Case>
+			<wrapper>./ping_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+	<case>
+		<info>ping test</info>
+		<name>run ping test</name>
+		<tout>1500</tout>
+		<cmd>
+			<params>
+				<static_args> --msg_size 64 --iter_num 1 --timeout 100 </static_args>
+			</params>
+		</cmd>
+	</case>
+
+	<case>
+		<info>ping test</info>
+		<name>run ping test</name>
+		<tout>1500</tout>
+		<cmd>
+			<params>
+				<static_args> --msg_size 512 --iter_num 1 --timeout 100 </static_args>
+			</params>
+		</cmd>
+	</case>
+</CASEDEF>
+

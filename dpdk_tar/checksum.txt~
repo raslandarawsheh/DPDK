@@ -1,0 +1,9 @@
+% Checksum Tests
++ Informations
+
+= Send Packet via Scapy
+data= 'Data to be sent via Scapy'
+load_contrib('vxlan')
+p = Ether(src='f4:52:14:2c:5d:42', dst='f4:52:14:2c:5d:21')/IP(dst='11.4.3.5', src='11.4.3.6')/UDP(sport=1337,dport=4789)/VXLAN(vni=42)/Ether()/IP()/TCP(sport=1338,dport=4788) 
+p[VXLAN][TCP].chksum = 0xabc 
+sendp(p, iface='eth5')

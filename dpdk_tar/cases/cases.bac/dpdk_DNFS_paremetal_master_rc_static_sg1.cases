@@ -1,0 +1,323 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DMFS Test libs compiled statically with SGE_WR_N=1</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+	
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>DNFS Test</info>
+                <name>Multicast with non exist mac address in promiscuous mode</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+	<case>
+                <info>DNFS Test</info>
+                <name>Multicast with non exist mac address in promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --dest_ip multicast --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Multicast with non exist mac address in promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --dest_ip multicast --invalidMac ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --invalidMac ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+	<case>
+                <info>DNFS Test</info>
+                <name>Multicast with non exist mac address in promiscuous mode with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --dest_ip multicast --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with running testpmd with 2 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Multicast with non exist mac address in promiscuous mode with running testpmd with 2 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --dest_ip multicast --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>	
+	
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with running testpmd with 4 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --disable_rss ' ' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>	
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Multicast with non exist mac address in promiscuous mode with running testpmd with 4 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --disable_rss ' ' --dest_ip multicast --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>	
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with running testpmd with 8 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>	
+
+ 	<case>
+                <info>DNFS Test</info>
+                <name>Multicast with non exist mac address in promiscuous mode with running testpmd with 8 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' --dest_ip multicast --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+	</case>
+	
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with exist mac address in non promiscuous mode and adding  this non exist mac from  testpmd with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --invalidMac ' ' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with exist mac address in non promiscuous mode and adding  this non exist mac from  testpmd with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' --invalidMac ' ' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Multicast with non exist mac address in promiscuous mode with running testpmd with 2 queues with -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --dest_ip multicast --invalidMac ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with running testpmd with 2 queues with disable receive side scaling with -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --invalidMac ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with -d and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Multicast with non exist mac address in promiscuous mode with running testpmd with 2 queues with -d and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --dest_ip multicast --invalidMac ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with running testpmd with 2 queues with disable receive side scaling with -d and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --invalidMac ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' '  --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Multicast with non exist mac address in promiscuous mode with running testpmd with 2 queues with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --dest_ip multicast --invalidMac ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with running testpmd with 2 queues with disable receive side scaling with -d and -m and compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --invalidMac ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Multicast with non exist mac address in promiscuous mode with running testpmd with 2 queues with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --dest_ip multicast --invalidMac ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>DNFS Test</info>
+                <name>Unicast with non exist mac address in promiscuous mode with running testpmd with 2 queues with disable receive side scaling with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --static ' ' --master_rc ' '  --dnfs ' '  --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --invalidMac ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	
+</CASEDEF>

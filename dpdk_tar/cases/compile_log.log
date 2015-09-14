@@ -1,0 +1,50 @@
+
+cd /download/mlx4_pmd_beta_v2.8.1/ ; ./compile_mlx4_pmd.sh -s /download/dpdk-1.8.0 -t x86_64-native-linuxapp-gcc 
+*******************************************************************************************
+/download/mlx4_pmd_beta_v2.8.1 ====>>> Pass
+*******************************************************************************************
+
+cd /download/mlx4_pmd_beta_v2.8.1/ ; ./compile_mlx4_pmd.sh -s /download/dpdk-1.8.0 -t x86_64-native-linuxapp-gcc -r
+*******************************************************************************************
+/download/mlx4_pmd_beta_v2.8.1.recvinline ====>>> Pass/download/mlx4_pmd_beta_v2.8.1.recvinline ====>>> Pass
+*******************************************************************************************
+
+cd /download/mlx4_pmd_beta_v2.8.1/ ; ./compile_mlx4_pmd.sh -s /download/dpdk-1.8.0 -t x86_64-native-linuxapp-gcc -r -d
+*******************************************************************************************
+/download/mlx4_pmd_beta_v2.8.1.recvinline.debug ====>>> Pass/download/mlx4_pmd_beta_v2.8.1.recvinline.debug ====>>> Pass
+*******************************************************************************************
+
+cd /download/mlx4_pmd_beta_v2.8.1/ ; ./compile_mlx4_pmd.sh -s /download/dpdk-1.8.0 -t x86_64-native-linuxapp-gcc -m
+*******************************************************************************************
+/download/mlx4_pmd_beta_v2.8.1.mtuset ====>>> Pass/download/mlx4_pmd_beta_v2.8.1.mtuset ====>>> Pass
+*******************************************************************************************
+
+cd /download/mlx4_pmd_beta_v2.8.1/ ; ./compile_mlx4_pmd.sh -s /download/dpdk-1.8.0 -t x86_64-native-linuxapp-gcc -c
+*******************************************************************************************
+/download/mlx4_pmd_beta_v2.8.1.checksum ====>>> Pass/download/mlx4_pmd_beta_v2.8.1.checksum ====>>> Pass
+*******************************************************************************************
+
+cd /download/mlx4_pmd_beta_v2.8.1/ ; ./compile_mlx4_pmd.sh -s /download/dpdk-1.8.0 -t x86_64-native-linuxapp-gcc -d
+*******************************************************************************************
+/download/mlx4_pmd_beta_v2.8.1.debug ====>>> Pass/download/mlx4_pmd_beta_v2.8.1.debug ====>>> Pass
+*******************************************************************************************
+
+cd /download/mlx4_pmd_beta_v2.8.1/ ; ./compile_mlx4_pmd.sh -s /download/dpdk-1.8.0 -t x86_64-native-linuxapp-gcc -c -d
+*******************************************************************************************
+/download/mlx4_pmd_beta_v2.8.1.checksum.debug ====>>> Pass/download/mlx4_pmd_beta_v2.8.1.checksum.debug ====>>> Pass
+*******************************************************************************************
+
+cd /download/mlx4_pmd_beta_v2.8.1/ ; ./compile_mlx4_pmd.sh -s /download/dpdk-1.8.0 -t x86_64-native-linuxapp-gcc -m -c
+*******************************************************************************************
+/download/mlx4_pmd_beta_v2.8.1.mtuset.checksum ====>>> Pass/download/mlx4_pmd_beta_v2.8.1.mtuset.checksum ====>>> Pass
+*******************************************************************************************
+
+cd /download/mlx4_pmd_beta_v2.8.1/ ; ./compile_mlx4_pmd.sh -s /download/dpdk-1.8.0 -t x86_64-native-linuxapp-gcc -m -d -c
+*******************************************************************************************
+/download/mlx4_pmd_beta_v2.8.1.mtuset.checksum.debug ====>>> Pass/download/mlx4_pmd_beta_v2.8.1.mtuset.checksum.debug ====>>> Pass
+*******************************************************************************************
+
+cd /download/mlx4_pmd_beta_v2.8.1/ ; ./compile_mlx4_pmd.sh -s /download/dpdk-1.8.0 -t x86_64-native-linuxapp-gcc -m -d
+*******************************************************************************************
+/download/mlx4_pmd_beta_v2.8.1.mtuset.debug ====>>> Pass/download/mlx4_pmd_beta_v2.8.1.mtuset.debug ====>>> Pass
+*******************************************************************************************

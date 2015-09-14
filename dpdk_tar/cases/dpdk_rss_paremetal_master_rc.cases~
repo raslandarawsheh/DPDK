@@ -1,0 +1,513 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DPDK test</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+	        <case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' '  --traffic 'IPV4'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --invalidMac ' ' --rssQueuesFlage ' '  --traffic 'IPV4'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --setPromisc ' ' --rssQueuesFlage ' '  --traffic 'IPV4'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+ <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' '  --traffic 'IPV4'  --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' '  --traffic 'IPV4'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --invalidMac ' ' --rssQueuesFlage ' '  --traffic 'IPV4'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' --rssQueuesFlage ' '  --traffic 'IPV4'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+ <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' '  --traffic 'IPV4'  --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' '  --traffic 'IPV6'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --invalidMac ' ' --rssQueuesFlage ' '  --traffic 'IPV6'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --setPromisc ' ' --rssQueuesFlage ' '  --traffic 'IPV6'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+ <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' '  --traffic 'IPV6'  --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' '  --traffic 'IPV6'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --invalidMac ' ' --rssQueuesFlage ' '  --traffic 'IPV6'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' --rssQueuesFlage ' '  --traffic 'IPV6'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+ <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' '  --traffic 'IPV6'  --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' '  --traffic 'TCP_IPV6'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --invalidMac ' ' --rssQueuesFlage ' '  --traffic 'TCP_IPV6'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --setPromisc ' ' --rssQueuesFlage ' '  --traffic 'TCP_IPV6'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+ <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' '  --traffic 'TCP_IPV6'  --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' '  --traffic 'TCP_IPV6'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --invalidMac ' ' --rssQueuesFlage ' '  --traffic 'TCP_IPV6'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' --rssQueuesFlage ' '  --traffic 'TCP_IPV6'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+ <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' '  --traffic 'TCP_IPV6'  --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' '  --traffic 'TCP_IPV4'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --invalidMac ' ' --rssQueuesFlage ' '  --traffic 'TCP_IPV4'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --setPromisc ' ' --rssQueuesFlage ' '  --traffic 'TCP_IPV4'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+ <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' '  --traffic 'TCP_IPV4'  --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' '  --traffic 'TCP_IPV4'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --invalidMac ' ' --rssQueuesFlage ' '  --traffic 'TCP_IPV4'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' --rssQueuesFlage ' '  --traffic 'TCP_IPV4'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+ <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' '  --traffic 'TCP_IPV4'  --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' '  --traffic 'UDP_IPV4'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --invalidMac ' ' --rssQueuesFlage ' '  --traffic 'UDP_IPV4'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --setPromisc ' ' --rssQueuesFlage ' '  --traffic 'UDP_IPV4'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+ <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' '  --traffic 'UDP_IPV4'  --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' '  --traffic 'UDP_IPV4'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --invalidMac ' ' --rssQueuesFlage ' '  --traffic 'UDP_IPV4'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' --rssQueuesFlage ' '  --traffic 'UDP_IPV4'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+ <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' '  --traffic 'UDP_IPV4'  --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' '  --traffic 'UDP_IPV6'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --invalidMac ' ' --rssQueuesFlage ' '  --traffic 'UDP_IPV6'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --setPromisc ' ' --rssQueuesFlage ' '  --traffic 'UDP_IPV6'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+ <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --rssQueuesFlage ' '  --traffic 'UDP_IPV6'  --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' '  --traffic 'UDP_IPV6'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --invalidMac ' ' --rssQueuesFlage ' '  --traffic 'UDP_IPV6'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' --rssQueuesFlage ' '  --traffic 'UDP_IPV6'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+ <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --rssQueuesFlage ' '  --traffic 'UDP_IPV6'  --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+</CASEDEF>

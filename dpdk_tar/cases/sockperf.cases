@@ -1,0 +1,1404 @@
+<CASEDEF>
+        <global>
+                <Test>
+                        <info>test</info>
+                        <name>Sockperf test</name>
+                        <owner>Fhamad</owner>
+                </Test>
+                <Case>
+                        <wrapper>./sockperfMarsWrapper.py</wrapper>
+                        <tout>1500</tout>
+                </Case>
+        </global>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 14 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 128 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 512 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 14 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 128 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 512 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 14 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 128 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>	
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 512 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 14, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 128, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 512, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 14, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+         <case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 128, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 512, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 14, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+         <case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 128, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 512, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 14, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+         <case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 128, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 512, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 14, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+         <case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 128, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 512, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 14, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+         <case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 128, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong UDP unicast with message size 512, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 14, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 128, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 512, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	 <case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 14, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 128, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 512, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 14, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 128, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 512, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 14, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 128, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 512, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 14, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 128, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 512, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 14, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 128, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong multicast with message size 512, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 14, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 128, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 512, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 14, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 128, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 512, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 14, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 128, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 512, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 14, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 128, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 512, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 14, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 128, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 512, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 14, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 128, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>ping pong TCP with message size 512, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --ping-pong ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+
+
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 14 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 128 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 512 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 14 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 128 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 512 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 14 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 128 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>	
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 512 and message rate max </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 14, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 128, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 512, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 14, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+         <case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 128, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 512, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 14, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+         <case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 128, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 512, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 14, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+         <case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 128, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 512, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 14, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+         <case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 128, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 512, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 14, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+         <case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 128, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput UDP unicast with message size 512, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 14, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 128, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 512, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	 <case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 14, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 128, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 512, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 14, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 128, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 512, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 14, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 128, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 512, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 14, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 128, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 512, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 14, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --multicast ' ' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 128, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --multicast ' ' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput multicast with message size 512, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --multicast ' ' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 14, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 128, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 512, message rate max and 5 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' --file feedFile --sockets 5 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 14, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 128, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 512, message rate max and 50 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' --file feedFile --sockets 50 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 14, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 128, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 512, message rate max and 500 sockets </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' --file feedFile --sockets 500 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 14, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 128, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 512, message rate max, 5 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' --file feedFile --sockets 5 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 14, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 128, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 512, message rate max, 50 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' --file feedFile --sockets 50 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 14, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 14 --mps 'max' --tcp ' ' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 128, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 128 --mps 'max' --tcp ' ' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Sockperf test</info>
+                <name>Throughput TCP with message size 512, message rate max, 500 sockets and poll iomux type </name>
+                <tout>250</tout>
+                <cmd>
+                        <params>
+                                <static_args> --server ' ' --throughput ' ' --time 4 --msg-size 512 --mps 'max' --tcp ' ' --file feedFile --sockets 500 --iomux-type 'p' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+</CASEDEF>

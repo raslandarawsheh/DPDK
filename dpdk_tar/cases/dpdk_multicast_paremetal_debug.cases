@@ -1,0 +1,291 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>Multicast Test</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+         <case>
+                <info>dpdk test</info>
+                <name>Multicast  </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '    --device '/dev/mst/mt4103_pci_cr0' --multicast ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --multicast ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --multicast ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 4 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --disable_rss ' ' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 8 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --rssQueuesFlage ' ' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 8 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' --multicast ' ' --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --multicast ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --multicast ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 4 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --multicast ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 8 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --multicast ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues with disable receive side scaling over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --multicast ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 4 queues with disable receive side scaling over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --multicast ' ' --disable_rss ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 8 queues with disable receive side scaling over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '     --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --disable_rss ' ' --multicast ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>MTU set test</info>
+                <name>Multicast   with port up in init</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --portUpInInit ' ' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>MTU set test</info>
+                <name>Case5 Multicast   setting mtu to 1000 with mtu set multiple times</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --multicast ' ' --mtuSet 1000 --mtuSetMultipleTimes ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>MTU set test</info>
+                <name>Case5 Multicast   setting mtu to 1000</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --multicast ' ' --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>MTU set test</info>
+                <name>Case13 Multicast   with running testpmd with 2 queues setting mtu to 1000</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --multicast ' ' --txq 2 --rxq 2 --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>MTU set test</info>
+                <name>Case76 Multicast   with running testpmd with 8 queues setting mtu to 1000 with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --multicast ' ' --txq 8 --rxq 8 --disable_rss ' ' --rssQueuesFlage ' ' --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+         <case>
+                <info>dpdk test</info>
+                <name>Multicast   ipv6 </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --device '/dev/mst/mt4103_pci_cr0' --multicast ' '  --ipv6 ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+      
+         <case>
+                <info>dpdk test</info>
+                <name>Multicast   with vlanFiltering on 1 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '   --device '/dev/mst/mt4103_pci_cr0' --multicast ' ' --vlanFiltering '1' </static_args>
+                        </params>
+                </cmd>
+        </case>
+ 
+
+         <case>
+                <info>dpdk test</info>
+                <name>Multicast   with vlanFiltering on 2 vlans</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' '   --device '/dev/mst/mt4103_pci_cr0' --multicast ' ' --vlanFiltering '2' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+</CASEDEF>

@@ -1,0 +1,24 @@
+<CASEDEF>
+        <global>
+                <Test>
+                        <info>test</info>
+                        <name>DPDK test</name>
+                        <owner>Fhamad</owner>
+                </Test>
+                <Case>
+                        <wrapper>./dpdk_wrapper.py</wrapper>
+                        <tout>1500</tout>
+                </Case>
+        </global>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast  </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+</CASEDEF>

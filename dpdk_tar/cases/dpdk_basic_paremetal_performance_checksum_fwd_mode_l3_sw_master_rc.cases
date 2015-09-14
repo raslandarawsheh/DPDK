@@ -1,0 +1,345 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DPDK Performanwe L3 Software Checksum Test</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_performance_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  message size 64 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP'  --first_case ' ' --msg-size 64 --device '/dev/mst/mt4103_pci_cr0'  --fwd-mode sw</static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  message size 128 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP'  --msg-size 128 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  message size 256 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP'  --msg-size 256 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  message size 512 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP'  --msg-size 512 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  message size 1024 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP'  --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional  message size 64 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --Bidirectional ' '   --msg-size 64 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional  message size 128 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --Bidirectional ' '   --msg-size 128 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional  message size 256 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --Bidirectional ' '   --msg-size 256 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional  message size 512 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --Bidirectional ' '   --msg-size 512 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional  message size 1024 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --Bidirectional ' '   --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional  message size 64 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --recv-inline ' '  --Bidirectional ' '   --msg-size 64 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional  message size 128 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --recv-inline ' '  --Bidirectional ' '   --msg-size 128 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional  message size 256 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --recv-inline ' '  --Bidirectional ' '   --msg-size 256 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional  message size 512 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --recv-inline ' '  --Bidirectional ' '   --msg-size 512 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional  message size 1024 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --recv-inline ' '  --Bidirectional ' '   --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast Enable RSS message size 64 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --RSS ' ' --msg-size 64 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast Enable RSS message size 128 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --RSS ' ' --msg-size 128 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast Enable RSS message size 256 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --RSS ' ' --msg-size 256 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast Enable RSS message size 512 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --RSS ' ' --msg-size 512 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast Enable RSS message size 1024 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --RSS ' ' --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional Enable RSS message size 64 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --Bidirectional ' '  --RSS ' ' --msg-size 64 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional Enable RSS message size 128 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --Bidirectional ' '  --RSS ' ' --msg-size 128 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional Enable RSS message size 256 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --Bidirectional ' '  --RSS ' ' --msg-size 256 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional Enable RSS message size 512 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --Bidirectional ' '  --RSS ' ' --msg-size 512 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bidirectional Enable RSS message size 1024 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --Bidirectional ' '  --RSS ' ' --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional Enable RSS message size 64 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 64 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional Enable RSS message size 128 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 128 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional Enable RSS message size 256 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 256 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional Enable RSS message size 512 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --checksum 'IP' --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 512 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>recv inline Bidirectional Enable RSS message size 1024 with IP checksum</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --master_rc ' ' --last_case 'checksum_fwd_mode_l3_sw' --checksum 'IP' --recv-inline ' '  --Bidirectional ' '  --RSS ' ' --msg-size 1024 --device '/dev/mst/mt4103_pci_cr0' --fwd-mode sw </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+</CASEDEF>

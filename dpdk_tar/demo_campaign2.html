@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>VXLAN Tests</title>
+<link rel="stylesheet" href="http://www.secdev.org/projects/UTscapy/UTscapy.css" type="text/css">
+<script language="JavaScript" src="http://www.secdev.org/projects/UTscapy/UTscapy.js" type="text/javascript"></script>
+</head>
+<body>
+
+<h1>VXLAN Tests</h1>
+
+<span class=button onClick="hide_all('tst')">Shrink All</span>
+<span class=button onClick="show_all('tst')">Expand All</span>
+<span class=button onClick="show_passed('tst')">Expand Passed</span>
+<span class=button onClick="show_failed('tst')">Expand Failed</span>
+<p>
+CRC=<span class=crc>56844510</span> SHA=<span class=crc>06806D95C9017ACBCEC690CD8BFC61304D6677D2</span><br><small><em>Run Sun Mar 22 13:41:18 2015 from [sniff.txt] by <a href="http://www.secdev.org/projects/UTscapy/">UTscapy</a><br></em></small> Tests for the Scapy VXLAN layer
+
+<p>PASSED=1 FAILED=0<p>
+
+<span class=buttonpassed onClick="goto_id('tst0l')">000</span>
+
+
+<h2><span class=crc>43DB3966</span> Informations</h2>
+
+<ul>
+<li class=passed id="tst0l">
+
+<span id="tst0+" class="buttonpassed" onClick="show('tst0')">+000+</span>
+<span id="tst0-" class="buttonpassed" onClick="hide('tst0')" style="POSITION: absolute; VISIBILITY: hidden;">-000-</span>
+<span class=crc>91CD0637</span>
+Build a VXLAN packet with VNI of 42
+<span class="comment passed" id="tst0"  style="POSITION: absolute; VISIBILITY: hidden;" ><br>
+<pre>
+&gt;&gt;&gt; load_contrib('vxlan')
+&gt;&gt;&gt; 
+&gt;&gt;&gt; sniff(iface="eth5", prn=lambda x: x.show2(), count = 1)
+###[ <span class=layer_name>Ethernet</span> ]###
+  <span class=field_name>dst</span>= <span class=field_value>ff:ff:ff:ff:ff:ff</span>
+  <span class=field_name>src</span>= <span class=field_value>00:00:00:00:00:00</span>
+  <span class=field_name>type</span>= <span class=field_value>0x800</span>
+###[ <span class=layer_name>IP</span> ]###
+     <span class=field_name>version</span>= <span class=field_value>4L</span>
+     <span class=field_name>ihl</span>= <span class=field_value>5L</span>
+     <span class=field_name>tos</span>= <span class=field_value>0x0</span>
+     <span class=field_name>len</span>= <span class=field_value>90</span>
+     <span class=field_name>id</span>= <span class=field_value>1</span>
+     <span class=field_name>flags</span>= <span class=field_value></span>
+     <span class=field_name>frag</span>= <span class=field_value>0L</span>
+     <span class=field_name>ttl</span>= <span class=field_value>64</span>
+     <span class=field_name>proto</span>= <span class=field_value>udp</span>
+     <span class=field_name>chksum</span>= <span class=field_value>0x7c90</span>
+     <span class=emph_field_name>src</span>= <span class=emph_field_value>127.0.0.1</span>
+     <span class=emph_field_name>dst</span>= <span class=emph_field_value>127.0.0.1</span>
+     \<span class=field_name>options</span>\
+###[ <span class=layer_name>UDP</span> ]###
+        <span class=field_name>sport</span>= <span class=field_value>menandmice_dns</span>
+        <span class=field_name>dport</span>= <span class=field_value>4789</span>
+        <span class=field_name>len</span>= <span class=field_value>70</span>
+        <span class=field_name>chksum</span>= <span class=field_value>0x1fa0</span>
+###[ <span class=layer_name>VXLAN</span> ]###
+           <span class=field_name>flags</span>= <span class=field_value>I</span>
+           <span class=field_name>reserved1</span>= <span class=field_value>0x0</span>
+           <span class=field_name>vni</span>= <span class=field_value>42</span>
+           <span class=field_name>reserved2</span>= <span class=field_value>0x0</span>
+###[ <span class=layer_name>Ethernet</span> ]###
+              <span class=field_name>dst</span>= <span class=field_value>ff:ff:ff:ff:ff:ff</span>
+              <span class=field_name>src</span>= <span class=field_value>00:00:00:00:00:00</span>
+              <span class=field_name>type</span>= <span class=field_value>0x800</span>
+###[ <span class=layer_name>IP</span> ]###
+                 <span class=field_name>version</span>= <span class=field_value>4L</span>
+                 <span class=field_name>ihl</span>= <span class=field_value>5L</span>
+                 <span class=field_name>tos</span>= <span class=field_value>0x0</span>
+                 <span class=field_name>len</span>= <span class=field_value>40</span>
+                 <span class=field_name>id</span>= <span class=field_value>1</span>
+                 <span class=field_name>flags</span>= <span class=field_value></span>
+                 <span class=field_name>frag</span>= <span class=field_value>0L</span>
+                 <span class=field_name>ttl</span>= <span class=field_value>64</span>
+                 <span class=field_name>proto</span>= <span class=field_value>tcp</span>
+                 <span class=field_name>chksum</span>= <span class=field_value>0xabc</span>
+                 <span class=emph_field_name>src</span>= <span class=emph_field_value>127.0.0.1</span>
+                 <span class=emph_field_name>dst</span>= <span class=emph_field_value>127.0.0.1</span>
+                 \<span class=field_name>options</span>\
+###[ <span class=layer_name>TCP</span> ]###
+                    <span class=field_name>sport</span>= <span class=field_value>wmc_log_svc</span>
+                    <span class=field_name>dport</span>= <span class=field_value>4788</span>
+                    <span class=field_name>seq</span>= <span class=field_value>0</span>
+                    <span class=field_name>ack</span>= <span class=field_value>0</span>
+                    <span class=field_name>dataofs</span>= <span class=field_value>5L</span>
+                    <span class=field_name>reserved</span>= <span class=field_value>0L</span>
+                    <span class=field_name>flags</span>= <span class=field_value>S</span>
+                    <span class=field_name>window</span>= <span class=field_value>8192</span>
+                    <span class=field_name>chksum</span>= <span class=field_value>0x79f2</span>
+                    <span class=field_name>urgptr</span>= <span class=field_value>0</span>
+                    <span class=field_name>options</span>= <span class=field_value>{}</span>
+&lt;<span class=packetlist_name>Sniffed</span>: <span class=packetlist_proto>TCP</span>:<span class=packetlist_value>1</span> <span class=packetlist_proto>UDP</span>:<span class=packetlist_value>0</span> <span class=packetlist_proto>ICMP</span>:<span class=packetlist_value>0</span> <span class=packetlist_proto>Other</span>:<span class=packetlist_value>0</span>&gt;
+</pre></span>
+
+</ul>
+
+</body></html>

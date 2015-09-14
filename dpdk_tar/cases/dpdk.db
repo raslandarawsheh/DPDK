@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBDEF>
+        <global>
+                <!-- parameters passed to setup steps commands-->
+                <default_params_type> basic_setup_step_params </default_params_type>
+                <DB>
+                        <info> DPDK Test </info>
+                        <owner> alongr </owner>
+                        <group> DPDK </group>
+                        <dimension> DPDK  </dimension>
+
+                        <!-- OPTIONAL TAGS -->
+                        <tags> DPDK-Setup-DMZ </tags>
+
+                        <!-- pre db commands - executed once before DB run -->
+
+                        <!-- post db commands - executed once after DB run -->
+
+                        <!--on_not_success>
+                                <cmd>
+                                        <type> reg_exec_func </type>
+                                        <name> send_email </name>
+                                        <tout> 100 </tout>
+                                        <params>
+                                                <send_to> alongr </send_to>
+                                                <subject> JXIO MARS Test run has failed </subject>
+                                                <message> Test run has failed. Domovoi.</message>
+                                                <session_id> [[run_time:session_id]] </session_id>
+                                                <setup_id> [[run_time:setup_id]] </setup_id>
+                                                <setup_conf_file> [[run_time:setup_conf_file]] </setup_conf_file>
+                                        </params>
+                                </cmd>
+                        </on_not_success-->
+                </DB>
+                <Test>
+                        <tags> <!-- ADD TEST NAME --> </tags>
+                        <pre>  </pre>
+                        <post> </post>
+                </Test>
+        </global>
+	
+	<repository_files>
+                 <repo>
+                        <type> git </type>
+                        <location> /mswg/git/ </location>
+                        <branch> master </branch>
+                        <src_path> accl/jxio-regression.git/ </src_path>
+                        <target_path> tests/ </target_path>
+                </repo>
+        </repository_files>
+
+	<!-- Dynamic Libibverbs & Libmlx4 Compiled  -->
+	<test>
+                <cases> tests/cases/dpdk_basic_paremetal_master_rc_one_case.cases </cases>
+        </test>
+
+        <test>
+                <cases> tests/cases/dpdk_checksum_paremetal_master_rc_one_case.cases </cases>
+        </test>
+
+</DBDEF>

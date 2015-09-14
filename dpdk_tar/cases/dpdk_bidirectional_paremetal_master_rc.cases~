@@ -1,0 +1,200 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DPDK  Bidirectional tests </name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional   </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional ''  --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional   </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional '' mtuSet 2048   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+	<case>
+                <Info>dpdk test</info>
+                <name>Bidirectional   </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional '' mtuSet 4096   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional   </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional '' mtuSet 9216   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0'  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional  with non exist mac address </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional ''   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional    and adding the invalid mac from testpmd</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional ''   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional    and adding the invalid mac from testpmd</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional '' --mtuSet 2096   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional    and adding the invalid mac from testpmd</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional '' --mtuSet 4096   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional    and adding the invalid mac from testpmd</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional '' --mtuSet 9216   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional    with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional ''   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional  with non exist mac address  with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional ''   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional    and adding the invalid mac from testpmd with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional ''   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional    with running testpmd with 2 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional ''   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional    and enabing multicast </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional ''   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional    and enabing multicast </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional '' --mtuSet 2048   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional    and enabing multicast </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional '' --mtuSet 4096   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	<case>
+                <info>dpdk test</info>
+                <name>Bidirectional    and enabing multicast </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --bidirectional '' --mtuSet 9216   --master_rc ' ' --device '/dev/mst/mt4103_pci_cr0' --multicast ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+
+</CASEDEF>

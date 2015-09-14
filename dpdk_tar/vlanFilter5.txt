@@ -1,0 +1,7 @@
+% vlanFilter Tests
++ Informations
+
+= Send Packet via Scapy
+data= 'Data to be sent via Scapy'
+p =Ether(src='f4:52:14:2c:5d:42', dst='FA:FA:FA:FA:FA:FA')/Dot1Q(vlan=5)/IP(dst='11.4.3.5', src='11.4.3.6')/UDP(sport=1337,dport=4789)/Raw(load=data) 
+sendp(p, iface='eth5')

@@ -1,0 +1,37 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>Multicast test</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+        <case>
+                <info>MTU set test</info>
+                <name>Case13 Multicast   with running testpmd with 2 queues setting mtu to 1000</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --multicast ' ' --txq 2 --rxq 2 --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+    
+        <case>
+                <info>MTU set test</info>
+                <name>Case76 Multicast   with running testpmd with 8 queues setting mtu to 1000 with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --m ' ' --device '/dev/mst/mt4103_pci_cr0'  --multicast ' ' --txq 8 --rxq 8 --disable_rss ' ' --rssQueuesFlage ' ' --mtuSet 1000 </static_args>
+                        </params>
+                </cmd>
+        </case>
+  
+</CASEDEF>

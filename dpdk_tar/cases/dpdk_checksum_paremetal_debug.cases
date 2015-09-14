@@ -1,0 +1,67 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DPDK checksum test in debug mode</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+	 <case>
+                <info>dpdk test</info>
+                <name>Bad IP Checksum  offloaded </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --checksum 'IP' --device '/dev/mst/mt4103_pci_cr0'  --d ' ' --offloaded '' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad UDP Checksum  offloaded </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --checksum 'UDP' --device '/dev/mst/mt4103_pci_cr0'  --d ' ' --offloaded '' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad TCP Checksum  offloaded </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --checksum 'TCP' --device '/dev/mst/mt4103_pci_cr0'  --d ' '  --offloaded '' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Bad IP/UDP Checksum  offloaded </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --checksum 'IP,UDP' --device '/dev/mst/mt4103_pci_cr0'  --d ' ' --offloaded '' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	 <case>
+                <info>dpdk test</info>
+                <name>Bad IP/TCP Checksum  offloaded </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --checksum 'IP,TCP' --device '/dev/mst/mt4103_pci_cr0'  --d ' ' --offloaded '' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+</CASEDEF>

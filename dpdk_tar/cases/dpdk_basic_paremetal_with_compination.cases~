@@ -1,0 +1,640 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DPDK test with compilation compinations</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address with -c and -d compilation flags </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --setPromisc ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --setPromisc ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>dpdk test</info>
+                <name>Multicast  with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast  --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>dpdk test</info>
+                <name>Multicast with non exist mac address with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast --invalidMac ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Multicastcast   and adding the invalid mac from testpmd with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast --add_mac ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+		
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 4 queues with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 8 queues with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --dest_ip multicast --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues with disable receive side scaling with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --add_mac ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>		
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 8 queues with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --invalidMac ' ' --rssQueuesFlage ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd over vlan with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --vlan ' ' --add_mac ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --setPromisc ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --setPromisc ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>dpdk test</info>
+                <name>Multicast  with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast  --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>dpdk test</info>
+                <name>Multicast with non exist mac address with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast --invalidMac ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Multicastcast   and adding the invalid mac from testpmd with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast --add_mac ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+		
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 8 queues with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --dest_ip multicast --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues with disable receive side scaling with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --add_mac ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>		
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 8 queues with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --invalidMac ' ' --rssQueuesFlage ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd over vlan with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --vlan ' ' --add_mac ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --setPromisc ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --setPromisc ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>dpdk test</info>
+                <name>Multicast with -d and -m compilation flags </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast  --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>dpdk test</info>
+                <name>Multicast with non exist mac address with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast --invalidMac ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Multicastcast   and adding the invalid mac from testpmd with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast --add_mac ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+		
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 4 queues with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 8 queues with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --dest_ip multicast --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues with disable receive side scaling with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --add_mac ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>		
+
+	<case>
+                <info>dpdk test</info> 
+                <name>Unicast with non exist mac address  with running testpmd with 8 queues with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --invalidMac ' ' --rssQueuesFlage ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd over vlan with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --vlan ' ' --add_mac ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --setPromisc ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --setPromisc ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>dpdk test</info>
+                <name>Multicast  with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast  --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>dpdk test</info>
+                <name>Multicast with non exist mac address with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast --invalidMac ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Multicastcast   and adding the invalid mac from testpmd with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast --add_mac ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+		
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 4 queues with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 4 --rxq 4 --setPromisc ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 8 queues with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --dest_ip multicast --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with running testpmd with 2 queues with disable receive side scaling with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2 --disable_rss ' ' --add_mac ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>		
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with running testpmd with 8 queues with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 8 --rxq 8 --invalidMac ' ' --rssQueuesFlage ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd over vlan with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --vlan ' ' --add_mac ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+
+</CASEDEF>

@@ -1,0 +1,341 @@
+<CASEDEF>
+        <global>
+                <Test>
+                        <info>test</info>
+                        <name>DPDK Vlan Filtering test</name>
+                        <owner>Fhamad</owner>
+                </Test>
+                <Case>
+                        <wrapper>./dpdk_wrapper.py</wrapper>
+                        <tout>1500</tout>
+                </Case>
+        </global>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with vlanFiltering on 1 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' ' '  --vlanFiltering '1' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with vlanFiltering on 1 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --vlanFiltering '1' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with vlanFiltering on 1 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --setPromisc ' ' --vlanFiltering '1' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with vlanFiltering on 1 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --setPromisc ' ' --vlanFiltering '1' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with vlanFiltering on 1 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --vlanFiltering '1' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in  promiscuous mode with running testpmd with 2 queues with vlanFiltering on 1 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2   ' ' --vlanFiltering '1' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 2 queues with rssQueueFlag with vlanFiltering on 1 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2  ' ' --rssQueuesFlage ' ' --vlanFiltering '1' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast    with vlanFiltering on 2 vlans</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' ' '  --vlanFiltering '2' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with vlanFiltering on 2 vlans</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --vlanFiltering '2' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with vlanFiltering on 2 vlans</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --setPromisc ' ' --vlanFiltering '2' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with vlanFiltering on 2 vlans</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --setPromisc ' ' --vlanFiltering '2' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with vlanFiltering on 2 vlans</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --vlanFiltering '2' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 2 queues with vlanFiltering on 2 vlans</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2   ' ' --vlanFiltering '2' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 2 queues with rssQueueFlag with vlanFiltering on 2 vlans</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2  ' ' --rssQueuesFlage ' ' --vlanFiltering '2' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with vlanFiltering on 1 vlan with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' ' '  --vlanFiltering '1'  --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast    with vlanFiltering on 2 vlans with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' ' '  --vlanFiltering '2' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with vlanFiltering on 1 vlan with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' ' '  --vlanFiltering '1'  --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast    with vlanFiltering on 2 vlans with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' ' '  --vlanFiltering '2' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+		
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with vlanFiltering on 1 vlan with -m and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' ' '  --vlanFiltering '1'  --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast    with vlanFiltering on 2 vlans with -m and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' ' '  --vlanFiltering '2' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with vlanFiltering on 1 vlan with -c and -m and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' ' '  --vlanFiltering '1'  --c ' ' --m ' ' --d ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast    with vlanFiltering on 2 vlans with -c and -m and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' ' '  --vlanFiltering '2' --c ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   with vlanFiltering on 3 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' ' '  --vlanFiltering '3' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address  with vlanFiltering on 3 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --vlanFiltering '3' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with vlanFiltering on 3 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --setPromisc ' ' --vlanFiltering '3' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode with vlanFiltering on 3 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --setPromisc ' ' --vlanFiltering '3' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast   and adding the invalid mac from testpmd with vlanFiltering on 3 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --vlanFiltering '3' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast  in  promiscuous mode with running testpmd with 2 queues with vlanFiltering on 3 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2   ' ' --vlanFiltering '3' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Unicast  in non promiscuous mode with running testpmd with 2 queues with rssQueueFlag with vlanFiltering on 3 vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --device '/dev/mst/mt4103_pci_cr0' --txq 2 --rxq 2  ' ' --rssQueuesFlage ' ' --vlanFiltering '3' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+</CASEDEF>
+

@@ -1,0 +1,134 @@
+#!/usr/bin/python
+try:
+    import os
+    import getopt
+    import sys
+    import socket
+    import time
+    import subprocess
+    import signal
+    import datetime
+    import random
+    import thread
+    import threading
+    import pexpect
+    import re
+    import thread
+    from socket import *
+    import fcntl
+    import struct
+
+except Exception, e:
+    print ("-E- can not import file %s" %e)
+    sys.exit(1)
+INVALID_SOCKET = 0
+BUF_LEN          = 5
+accepted_sock    = INVALID_SOCKET
+connect_sock     = INVALID_SOCKET
+is_s =False 
+
+if len(sys.argv) >= 2:
+    if str(sys.argv[1]) == '--server':
+        print "serveeeer"
+        is_s = True
+    else :
+        print "client"
+    
+def tcp_client(ip, port):
+    """
+    Function : tcp_client
+    Description : Create a TCP client to sync between server and client
+    Return value : None
+    """
+    serverHost = ip
+    serverPort = port
+    s = socket(AF_INET, SOCK_STREAM) # create a TCP socket
+    s.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+    s.connect((serverHost, serverPort)) # connect to server on the port
+    global connect_sock
+    connect_sock = s
+
+def run_command (cmd):
+    try:
+        fd = os.popen(cmd)
+        output = fd.read()
+        rc = fd.close()
+    except Exception, e:
+                vl.EXCEPTION("run_command Failed (%s), cmd %s" % (str(e), str(cmd)))
+                return (1, None)
+
+    if (rc != None):
+                rc = 1
+    else:
+                rc = 0
+
+    return (rc, output)
+
+def tcp_server(ip, port):
+    """
+    Function : tcp_server
+    Description : Create a TCP server to sync between server and client
+    Return value : None
+    """
+    myHost = ip
+    myPort = port
+    s = socket(AF_INET, SOCK_STREAM) # create a TCP socket
+    s.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+    s.bind((myHost, myPort)) # bind it to the server port
+    s.listen(5) # allow 5 simultaneous
+    # pending connections
+    connection, address = s.accept() # connection is a new socket
+    global accepted_sock
+    accepted_sock = connection
+def  run_test():
+     
+    if is_s :
+        tcp_server("10.224.14.113",9678)
+        serverCommandLine = "/download/dpdk/x86_64-native-linuxapp-gcc/build/app/test-pmd/testpmd -n 4  -c 0xff  -w 0000:21:00.0 --  --burst=64 --txd=256 --rxd=256 --mbcache=512 --portmask 0x3 -i  --nb-cores=4"
+        print serverCommandLine
+        child = pexpect.spawn(serverCommandLine)
+        child.sendline("set fwd csum")
+        child.sendline("start")
+        child.sendline("yes")
+        child.expect ('Command not found')
+        output = child.before
+        print output
+        accepted_sock.send("sync")
+        data = accepted_sock.recv(BUF_LEN)
+        print "data is ", data 
+        if data : 
+            print "RRRRR" 
+            child.sendline("show port stats all")
+            child.sendline("yes")
+            child.expect ('Command not found')
+            output = child.before
+            print output 
+            child.sendline("stop")
+            child.sendline("quit")
+        print "Done" 
+        sys.exit(0)
+    else :
+        tcp_client("10.224.14.113",9678)
+        print "Client "
+        data = connect_sock.recv(BUF_LEN)
+        print data
+        if data :
+            cmd = "raw_ethernet_bw --client --CPU-freq -i 2 -d mlx4_1 -l 8  --dest_mac=f4:52:14:2c:5d:21"
+            cmd = "raw_ethernet_bw --client --CPU-freq -i 2 -d mlx4_1 -l 8 --mtu 1024 --dest_mac=00:02:C9:21:00:00"
+            print cmd 
+            run_command(cmd)
+
+        else :
+            print "sync Error"
+        connect_sock.send("Sync")
+        sys.exit(0)    
+            
+if __name__ == "__main__":
+    """
+    Function : main
+    Description : The main function that will will start the run
+    Return value : None
+    """
+    run_test()
+
+

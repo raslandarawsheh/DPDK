@@ -1,0 +1,398 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DPDK VXLAN test libs compiled statically in debug mode</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast  </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'  --txq 2 --rxq 2 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'  --txq 4 --rxq 4 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with running testpmd with 2 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC' --txq 2 --rxq 2 --disable_rss ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast  </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC'   </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC'  --txq 2 --rxq 2 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC'  --txq 4 --rxq 4 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC' --txq 2 --rxq 2 --disable_rss ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>MTU set test</info>
+                <name>RSS   with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'RSS' --txq 2 --rxq 2 --rssQueuesFlage ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'  --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues over vlan with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC' --txq 2 --rxq 2 --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'  --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues over vlan with -c and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC' --txq 2 --rxq 2 --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'  --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues over vlan with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC' --txq 2 --rxq 2  --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with -c and -m and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'  --c ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues over vlan with -c and -m and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC' --txq 2 --rxq 2  --c ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'   --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with running testpmd with 2 queues over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'  --txq 2 --rxq 2 --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 4 queues over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'  --txq 4 --rxq 4 --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast   with running testpmd with 2 queues with disable receive side scaling over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC' --txq 2 --rxq 2 --disable_rss ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast  over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC'   --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast with running testpmd with 2 queues over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC'  --txq 2 --rxq 2 --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast with running testpmd with 4 queues over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC'  --txq 4 --rxq 4 --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+        <case>
+                <info>dpdk test</info>
+                <name>Multicast with running testpmd with 2 queues with disable receive side scaling over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC' --txq 2 --rxq 2 --disable_rss ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+	<case>
+                <info>MTU set test</info>
+                <name>RSS   with running testpmd with 2 queues over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'RSS' --txq 2 --rxq 2 --rssQueuesFlage ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with -c and -m compilation flags over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'  --c ' ' --m ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues over vlan with -c and -m compilation flags over vlan </name> 
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC' --txq 2 --rxq 2 --c ' ' --m ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with -c and -d compilation flags over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'  --c ' ' --d ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues over vlan with -c and -d compilation flags over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC' --txq 2 --rxq 2 --c ' ' --d ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with -d and -m compilation flags over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'  --d ' ' --m ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues over vlan with -d and -m compilation flags over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC' --txq 2 --rxq 2 --d ' ' --m ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with -c and -m and -d compilation flags over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'UC'  --c ' ' --m ' ' --d ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Multicast   with running testpmd with 2 queues over vlan with -c and -m and -d compilation flags over vlan </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --d ' ' --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --vxlan 'MC' --txq 2 --rxq 2 --c ' ' --m ' ' --d ' ' --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+
+
+</CASEDEF>

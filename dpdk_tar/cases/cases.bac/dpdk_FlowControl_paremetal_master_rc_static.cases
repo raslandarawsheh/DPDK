@@ -1,0 +1,218 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>Flow Control test libs compiled statically</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+<?ignore
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast   setting rxEthtool off and txEthtool off not at once</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --rxEthtool off --txEthtool off  </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast with non exist mac address  rxEthtool off and txEthtool off not at once</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --rxEthtool off --txEthtool off  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast  in non promiscuous mode rxEthtool off and txEthtool off not at once</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --setPromisc ' ' --rxEthtool off --txEthtool off  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast with non exist mac address in non promiscuous mode rxEthtool off and txEthtool off not at once</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --setPromisc ' ' --invalidMac ' ' --rxEthtool off --txEthtool off  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Multicast   rxEthtool off and txEthtool off not at once</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --dest_ip multicast --rxEthtool off --txEthtool off  </static_args>
+                        </params>
+                </cmd>
+        </case>
+?>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Multicast with non exist mac address  rxEthtool off and txEthtool on</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --invalidMac ' ' --dest_ip multicast --rxEthtool off --txEthtool on  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast   and adding the valid mac from testpmd rxEthtool on and txEthtool off</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --rxEthtool on --txEthtool off  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Multicastcast   and adding the valid mac from testpmd rxEthtool on and txEthtool on not at once</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --dest_ip multicast --rxEthtool on --txEthtool on  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>set flow control parameters at once to on and check the two ports </name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0'  --set_flow_control_at_once on  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>set flow control parameters at once to off and check the two ports</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --set_flow_control_at_once off  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast   and adding the valid mac from testpmd rxEthtool on and txEthtool off with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --rxEthtool on --txEthtool off   --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>set flow control parameters at once to off and check the two ports with -d and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --set_flow_control_at_once off  --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast   and adding the valid mac from testpmd rxEthtool on and txEthtool off with -d and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --rxEthtool on --txEthtool off  --d ' ' --c ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>set flow control parameters at once to off and check the two ports with -d and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --set_flow_control_at_once off  --d ' ' --c ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast   and adding the valid mac from testpmd rxEthtool on and txEthtool off with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --rxEthtool on --txEthtool off  --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>set flow control parameters at once to off and check the two ports with -c and -m compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --set_flow_control_at_once off  --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast   and adding the valid mac from testpmd rxEthtool on and txEthtool off with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --add_mac ' ' --rxEthtool on --txEthtool off  --d ' ' --m ' ' --c ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>set flow control parameters at once to off and check the two ports with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --static ' ' --master_rc ' '  --device '/dev/mst/mt4103_pci_cr0' --set_flow_control_at_once off  --d ' ' --m ' ' --c ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+
+		
+		
+
+</CASEDEF>

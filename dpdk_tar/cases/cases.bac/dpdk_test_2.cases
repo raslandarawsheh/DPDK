@@ -1,0 +1,378 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>DPDK test</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with exist mac address in promiscuous mode</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args>  </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in promiscuous mode</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with exist mac address in non promiscuous mode</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --setPromisc ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with non exist mac address in non promiscuous mode</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --invalidMac ' ' --setPromisc ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>dpdk test</info>
+                <name>Multicast with exist mac address in promiscuous mode</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --dest_ip multicast  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	 <case>
+                <info>dpdk test</info>
+                <name>Multicast with non exist mac address in promiscuous mode</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --dest_ip multicast --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Unicast with exist mac address in promiscuous mode and adding the valid mac from testpmd</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Multicastcast with exist mac address in promiscuous mode and adding the valid mac from testpmd</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --dest_ip multicast --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case9 Unicast with exist mac address in promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 2 --rxq 2 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case10 Unicast with non exist mac address in promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 2 --rxq 2 --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case11 Unicast with exist mac address in non promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 2 --rxq 2 --setPromisc ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case12 Unicast with non exist mac address in non promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 2 --rxq 2 --setPromisc ' ' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case13 Multicast with exist mac address in promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 2 --rxq 2 --dest_ip multicast  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case14 Multicast with non exist mac address in promiscuous mode with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 2 --rxq 2 --dest_ip multicast --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Case15 Unicast with exist mac address in promiscuous mode and adding the valid mac from testpmd with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 2 --rxq 2 --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case16 Multicastcast with exist mac address in promiscuous mode and adding the valid mac from testpmd with running testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 2 --rxq 2 --add_mac ' ' --dest_ip multicast </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case17 Unicast with exist mac address in promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 4 --rxq 4 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case18 Unicast with non exist mac address in promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 4 --rxq 4 --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case19 Unicast with exist mac address in non promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 4 --rxq 4 --setPromisc ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case20 Unicast with non exist mac address in non promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 4 --rxq 4 --setPromisc ' ' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case21 Multicast with exist mac address in promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 4 --rxq 4 --dest_ip multicast  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case22 Multicast with non exist mac address in promiscuous mode with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 4 --rxq 4 --dest_ip multicast --invalidMac ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case23 Unicast with exist mac address in promiscuous mode and adding the valid mac from testpmd with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 4 --rxq 4 --add_mac ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case24 Multicastcast with exist mac address in promiscuous mode and adding the valid mac from testpmd with running testpmd with 4 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 4 --rxq 4 --dest_ip multicast --add_mac ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case25 Unicast with exist mac address in promiscuous mode with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 8 --rxq 8  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case26 Unicast with non exist mac address in promiscuous mode with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 8 --rxq 8 --invalidMac ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Case27 Unicast with exist mac address in non promiscuous mode with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 8 --rxq 8 --setPromisc ' '  </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Case28 Unicast with non exist mac address in non promiscuous mode with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 8 --rxq 8 --setPromisc ' ' --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case29 Multicast with exist mac address in promiscuous mode with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 8 --rxq 8 --dest_ip multicast </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case30 Multicast with non exist mac address in promiscuous mode with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 8 --rxq 8 --dest_ip multicast --invalidMac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case31 Unicast with exist mac address in promiscuous mode and adding the valid mac from testpmd with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 8 --rxq 8 --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+	<case>
+                <info>dpdk test</info>
+                <name>Case32 Multicastcast with exist mac address in promiscuous mode and adding the valid mac from testpmd with running testpmd with 8 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 8 --rxq 8 --dest_ip multicast --add_mac ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>dpdk test</info>
+                <name>Case33 Unicast with exist mac address in promiscuous mode with running testpmd with 2 queues with disable receive side scaling</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --txq 2 --rxq 2 --disable_rss ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+	
+
+</CASEDEF>

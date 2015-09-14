@@ -1,0 +1,195 @@
+<CASEDEF>
+	<global>
+		<Test>
+			<info>test</info>
+			<name>Receive Inline test with SGE_WR_N=1</name>
+			<owner>Fhamad</owner>
+		</Test>
+		<Case>
+			<wrapper>./dpdk_wrapper.py</wrapper>
+			<tout>1500</tout>
+		</Case>
+	</global>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast with message size 64</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 64  </static_args>
+                        </params>
+                </cmd>
+        </case>
+		
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast with message size 64 running the testpmd with 2 queues</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 64 --txq 2 --rxq 2 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast with message size 64 running the testpmd with 4</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 64 --txq 4 --rxq 4 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast with message size 64 over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 64  --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+					
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast with message size 512</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 512  </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Flow Control</info>
+                <name>Unicast with message size 512 running the testpmd with 2 queue</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 512 --txq 2 --rxq 2 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast with message size 512 running the testpmd with 4 queue</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 512 --txq 4 --rxq 4 </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+        <case>
+                <info>Flow Control</info>
+                <name>Unicast  with message size 512 over vlan</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 512  --vlan ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast with message size 64 running the testpmd with 2 queues with -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 64 --txq 2 --rxq 2  --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+    	<case>
+                <info>Flow Control</info>
+                <name>Unicast  with message size 512 over vlan with -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 512  --vlan ' ' --c ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast with message size 64 running the testpmd with 2 queues with -d and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 64 --txq 2 --rxq 2 --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+    	<case>
+                <info>Flow Control</info>
+                <name>Unicast  with message size 512 over vlan with -d and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 512  --vlan ' ' --c ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast with message size 64 running the testpmd with 2 queues with -m and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 64 --txq 2 --rxq 2 --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+    	<case>
+                <info>Flow Control</info>
+                <name>Unicast  with message size 512 over vlan with -m and -d compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 512  --vlan ' ' --m ' ' --d ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+	<case>
+                <info>Flow Control</info>
+                <name>Unicast with message size 64 running the testpmd with 2 queues with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 64 --txq 2 --rxq 2 --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+
+    	<case>
+                <info>Flow Control</info>
+                <name>Unicast  with message size 512 over vlan with -d and -m and -c compilation flags</name>
+                <tout>120</tout>
+                <cmd>
+                        <params>
+                                <static_args> --sg1 ' ' --master_rc ' '  --recv-inline ' ' --device '/dev/mst/mt4103_pci_cr0' --msg-size 512  --vlan ' ' --c ' ' --d ' ' --m ' ' </static_args>
+                        </params>
+                </cmd>
+        </case>
+
+						
+</CASEDEF>
